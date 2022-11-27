@@ -1,0 +1,14 @@
+import smtplib
+
+sender = 'hellboyofdevil@gmail.com'
+
+reciver = 'mohamedsuhel03@gmail.com'
+
+msg = 'Mail Testing '
+
+try:
+    smtpObj = smtplib.SMTP('localhost')
+    smtpObj.sendmail(sender, reciver, msg )
+    print("Mail SUccessfully Sent")
+except smtplib.SMTPException:
+       print("Error") 
